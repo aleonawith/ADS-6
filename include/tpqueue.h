@@ -7,6 +7,7 @@ class TPQueue {
  private:
     int first, last, count;
     T arr[size] = {0};
+ 
  public:
     TPQueue() : first(0), last(0), count(0) {}
     void push(T temp) {
@@ -21,8 +22,6 @@ class TPQueue {
           arr[(t + 1) % size] = temp;
         }
         count++;
-      } else {
-        throw "Full!";
       }
     }
     T pop() {
