@@ -14,8 +14,7 @@ class TPQueue {
       int t = last++;
       if (count == 0) {
         arr[0] = temp;
-      }
-      else {
+      } else {
         while ((--t >= first) && (arr[t % size].prior < temp.prior)) {
           arr[(t + 1) % size] = arr[t % size];
         }
